@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>ChatApp</title>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script>
+
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+
+<div id="loginBox">
+  <h2>Login to StudyHub Chat</h2>
+  <input type="text" id="username" placeholder="Enter your name" autocomplete="username" />
+  <input type="password" id="userPassword" placeholder="Enter password (if any)" autocomplete="current-password" />
+  <button onclick="login()">Enter Chat</button>
+  <button onclick="forgotPassword()">Forgot Password?</button>
+</div>
+
+<div id="loading">Loading...</div>
+
+<div id="chatContainer">
+  <div id="sidebar">
+    <h3>Friends</h3>
+    <ul id="friendList"></ul>
+    <h3>Friend Requests</h3>
+    <ul id="requestsList"></ul>
+    <div id="addFriendBox">
+      <input type="text" id="addFriendInput" placeholder="Add friend by name"/>
+      <button onclick="sendFriendRequest()">Add Friend</button>
+    </div>
+    <div id="extraOption" onclick="viewOnlineUsers()">View Online Users</div>
+    <div id="setPassBtn" onclick="setPassword()">Set/Change Password</div>
+    <div id="logoutBtn" onclick="logout()">Logout</div>
+    <div id="toggleMode" onclick="toggleMode()">Toggle Dark/Light</div>
+  </div>
+
+  <div id="chat">
+    <div id="messages"></div>
+    <div id="input">
+      <input type="text" id="msgInput" placeholder="Type message..." />
+      <button type="button" id="sendBtn">Send</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
